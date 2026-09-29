@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-playfair), "Playfair Display", Georgia, serif;
+  --font-sans: var(--font-jakarta), "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+
+  --color-ivory-50: #FDFBF7;
+  --color-ivory-100: #FAF7F2;
+  --color-ivory-200: #F4EFE6;
+  --color-ivory-300: #E9E4DB;
+  --color-ivory-400: #D5CDBF;
+
+  --color-forest-800: #233524;
+  --color-forest-900: #1C281E;
+  --color-forest-950: #131C14;
+
+  --color-sage-400: #94A18A;
+  --color-sage-500: #7E8A74;
+  --color-sage-600: #64705A;
+
+  --color-terracotta-500: #C26148;
+  --color-terracotta-600: #A94E37;
+
+  --color-stone-subtle: #E8E3DC;
+  --color-stone-caption: #8C867E;
+  --color-slate-strong: #1E2320;
+  --color-earth-muted: #5C5852;
+}
+
+:root {
+  --background: #FAF7F2;
+  --foreground: #1C281E;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background-color: #FAF7F2;
+  color: #1C281E;
+  font-family: var(--font-jakarta), "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-playfair), "Playfair Display", Georgia, serif;
+}
+
+/* Glassmorphism Navigation Styles */
+.glass-nav-transparent {
+  background: rgba(19, 28, 20, 0.35);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-nav-scrolled {
+  background: rgba(250, 247, 242, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid #E9E4DB;
+  box-shadow: 0 4px 24px -2px rgba(19, 28, 20, 0.06);
+}
+
+/* Subtle Image Hover Transitions */
+.img-zoom-hover {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+}
+
+.group:hover .img-zoom-hover {
+  transform: scale(1.04);
+}
+
+/* Hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Ambient shadow for elevation */
+.shadow-ambient {
+  box-shadow: 0 12px 32px -8px rgba(35, 53, 36, 0.08), 0 4px 12px -2px rgba(58, 46, 38, 0.04);
+}
+
+.shadow-ambient-lg {
+  box-shadow: 0 20px 48px -12px rgba(19, 28, 20, 0.14), 0 8px 24px -4px rgba(35, 53, 36, 0.06);
+}
+
+/* Selection Color */
+::selection {
+  background-color: #7E8A74;
+  color: #FFFFFF;
+}
